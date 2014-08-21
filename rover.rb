@@ -22,21 +22,31 @@ class Rover
     @x = x
     @y = y
     @direction = direction
+
+ end
+
+intruction_list = ["L","R","M"]
+
+def directions(list)
+list.each do | item |
+
   end
 end
 
-class MovingSpecifications < Rover
-  attr_accessor :left_turn, :right_turn, :add_one
-  def rover_moving
-     @left_turn = "L"
-     @right_turn = "R"
-     @add_one = "M"
-  end
-end
 
+  def rover_moving(instruction_list)
 
+ end
 
-class Lefty < MovingSpecifications
+# class MovingSpecifications < Rover
+#   attr_accessor :left_turn, :right_turn, :add_one
+#   def rover_moving
+#      @left_turn = "L"
+#      @right_turn = "R"
+#      @add_one = "M"
+#   end
+# end
+
   def left_turn
     if @direction == "N"
       @direction = "E"
@@ -50,9 +60,7 @@ class Lefty < MovingSpecifications
       puts "oops try again!"
     end
   end
-end
 
-class Righty < MovingSpecifications
   def right_turn
     if @direction == "N"
       @direction = "W"
@@ -66,10 +74,7 @@ class Righty < MovingSpecifications
       puts "oops try again!"
     end
   end
-end
 
-
-class Oney < MovingSpecifications
   def add_one
     if @direction == "N"
       @x + 1
@@ -92,11 +97,11 @@ end
 
 rover1 = Rover.new(1, 2, "N")
 rover1.rover_moving("LMLMLMLMM")
-rover1.current_position
+#rover1.current_position
 
-rover2 = Rover.new(3, 3, "E")
-rover2.rover_moving("MMRMMRMRRM")
-rover2.current_position
+#rover2 = Rover.new(3, 3, "E")
+#rover2.rover_moving("MMRMMRMRRM")
+#rover2.current_position
 
 
 
